@@ -1,4 +1,10 @@
 module.exports = {
-  preset: 'ts-jest',
-  testEnvironment: 'node',
+  testEnvironment: "node",
+  transform: {
+    "^.+\\.(js|jsx|mjs)$": "babel-jest",
+    "^.+\\.tsx?$": "ts-jest"
+  },
+  collectCoverageFrom: ["<rootDir>/src/**/*.ts"],
+  coverageReporters: ["text-summary", "html"],
+  watchPathIgnorePatterns: ["<rootDir>/node_modules/"]
 };

@@ -1,4 +1,4 @@
-import * as dateTime from "../";
+import * as dateTime from "../src/index";
 
 describe("dateTime#daysInMonth", () => {
   it("should return 31 if no valid year or month was set", () => {

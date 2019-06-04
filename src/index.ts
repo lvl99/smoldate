@@ -78,29 +78,17 @@ export function convertStringToYearMonthDay(
  * Convert a YearMonthDay object to a Date object.
  */
 export function convertYearMonthDayToDate({
-  year,
-  month,
-  day
+  year = 0,
+  month = 1,
+  day = 1
 }: YearMonthDay): Date {
-  // Here be problems due to timezone
-  // const date = new Date();
-  // date.setUTCFullYear(year);
-  // date.setUTCMonth(month ? month - 1 : 0);
-  // date.setUTCDate(day);
-  // date.setUTCHours(0);
-  // date.setUTCMinutes(0);
-  // date.setUTCSeconds(0);
-  // date.setUTCMilliseconds(0);
-
-  // This be the most reliable, yarrr
-  const date = new Date(
-    `${padStart(`${year}`, 4, "0")}-${padStart(`${month}`, 2, "0")}-${padStart(
-      `${day}`,
+  return new Date(
+    `${padStart(`${year}`, 4, "0")}-${padStart(
+      `${month || 1}`,
       2,
       "0"
-    )}T00:00:00.000Z`
+    )}-${padStart(`${day || 1}`, 2, "0")}T00:00:00.000Z`
   );
-  return date;
 }
 
 /**

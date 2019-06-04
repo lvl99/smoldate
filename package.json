@@ -5,7 +5,7 @@
   "browser": "./dist/smoldate.umd.js",
   "main": "./dist/smoldate.cjs.js",
   "module": "./dist/smoldate.esm.js",
-  "types": "./index.d.ts",
+  "types": "./src/index.d.ts",
   "scripts": {
     "build": "tsc && rollup -c",
     "lint": "eslint 'index.ts' 'lib/**/*.ts' -c .eslintrc.json --ignore-path .lintignore",
@@ -53,6 +53,7 @@
     "rollup-plugin-terser": "^5.0.0",
     "ts-jest": "^24.0.2",
     "tslib": "^1.9.3",
-    "typescript": "^3.5.1"
+    "typescript": "^3.5.1",
+    "winston": "^3.2.1"
   }
 }
