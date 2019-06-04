@@ -34,6 +34,8 @@ const howOldIsStarWars = smoldate.getAge("1977-10-19");
 const canLegallyDrinkAlcohol = smoldate.validateAge("2000-01-01", 21);
 ```
 
+Check out the example on [codepen.io](https://codepen.io/lvl99/pen/byZXva)
+
 ## Installation
 
 ### Browser
