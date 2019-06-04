@@ -21,7 +21,7 @@ const nowAsYMD = smoldate.convertDateToYearMonthDay(new Date());
 // Get the number of days in a given month (reliant on the year)
 const daysInThisMonth = smoldate.daysInMonth(nowAsYMD.year, nowAsYMD.month);
 
-// Convert a date to a simple YYYY-MM-DD string
+// Convert an accepted date format to a simple YYYY-MM-DD string
 const nowAsString = smoldate.convertDateToString(nowAsYMD);
 
 // Adjust the date by days
